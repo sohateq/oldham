@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="main_array">
+        <item>Каталог</item>
+        <item>Опросы</item>
+        <item>Контакты</item>
+    </string-array>
+</resources>
