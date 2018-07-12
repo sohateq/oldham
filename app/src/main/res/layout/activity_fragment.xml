@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.a1.myapplication.item.FragmentActivity">
+    tools:context="com.example.a1.myapplication.item.FragmentActivity"
+    android:id="@+id/fragment_test">
 
 </android.support.constraint.ConstraintLayout>

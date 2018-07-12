@@ -4,6 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.a1.myapplication.item.ItemsActivity">
+    tools:context="com.example.a1.myapplication.item.ItemsActivity"
+    android:id="@+id/test">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:id="@+id/items_list_view"/>
 </android.support.constraint.ConstraintLayout>

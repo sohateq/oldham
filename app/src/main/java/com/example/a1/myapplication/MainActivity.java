@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.a1.myapplication.contacts.ContactActivity;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
@@ -30,7 +32,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(intent);
                         break;
                     case 1:
-                        System.out.println("40-to  tam");
+                        System.out.println("kfl");
+                        break;
+                    case 2:
+                        intent = new Intent(MainActivity.this, ContactActivity.class);
+                        startActivity(intent);
                         break;
                 }
             }

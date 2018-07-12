@@ -1,10 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.a1.myapplication.contacts.ContactActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/moscow_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+
+                android:textAlignment="center"
+
+
+
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/moscow_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/moscow_text_view"
+                android:layout_marginTop="0dp"
+                android:layout_centerHorizontal="true"
+                android:text="Схема проезда"
+
+                />
+
+            <TextView
+                android:id="@+id/spb_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@id/moscow_button"
+                android:textAlignment="center"
+
+
+
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/spb_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spb_text_view"
+                android:layout_marginTop="0dp"
+                android:layout_centerHorizontal="true"
+                android:text="Схема проезда"
+
+                />
+            <TextView
+                android:id="@+id/nishnii_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@id/spb_button"
+                android:textAlignment="center"
+
+
+
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/nishnii_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nishnii_text_view"
+                android:layout_marginTop="0dp"
+                android:layout_centerHorizontal="true"
+                android:text="Схема проезда"
+
+                />
+            <TextView
+                android:id="@+id/ekb_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@id/nishnii_button"
+                android:textAlignment="center"
+
+
+
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/ekb_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ekb_text_view"
+                android:layout_marginTop="0dp"
+                android:layout_centerHorizontal="true"
+                android:text="Схема проезда"
+
+                />
+            <TextView
+                android:id="@+id/novosib_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@id/ekb_button"
+                android:textAlignment="center"
+
+
+
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/novosib_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/novosib_text_view"
+                android:layout_marginTop="0dp"
+                android:layout_centerHorizontal="true"
+                android:text="Схема проезда"
+
+                />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
