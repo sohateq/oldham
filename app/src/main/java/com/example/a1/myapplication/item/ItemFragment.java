@@ -7,15 +7,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.a1.myapplication.R;
+import com.example.a1.myapplication.order.OrderActivity;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ItemFragment extends Fragment {
+public class ItemFragment extends Fragment implements View.OnClickListener {
 
     int item;
     int position;
@@ -70,6 +72,20 @@ public class ItemFragment extends Fragment {
         TextView textView = view.findViewById(R.id.fragment_text_view);
         ImageView imageView = view.findViewById(R.id.fragment_image_view);
         TextView descriptionView = view.findViewById(R.id.description_text_view);
+        //назначаем кнопку оформления заказа
+        Button button = view.findViewById(R.id.button_order);
+        button.setOnClickListener(this);
+
+//                new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (view.getId() == R.id.button_order){
+//                    Intent intent = new Intent(getContext(), OrderActivity.class);
+//                    startActivity(intent);
+//
+//                }
+//            }
+//        });
 
         int number = calculateItem(item, position);
 
@@ -81,4 +97,12 @@ public class ItemFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.button_order){
+            Intent intent = new Intent(getContext(), OrderActivity.class);
+            startActivity(intent);
+
+        }
+    }
 }

@@ -3,10 +3,12 @@ package com.example.a1.myapplication.contacts;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.util.Linkify;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -21,6 +23,10 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+        //кнопка назад
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
         //для Москвы
         TextView textView = findViewById(R.id.moscow_text_view);
         textView.setText(Html.fromHtml(getString(R.string.moscow_contacts)));
@@ -67,6 +73,17 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
     public void onClick(View view) {
         String geoURI;
         Uri geo;
@@ -100,7 +117,7 @@ public class ContactActivity extends AppCompatActivity implements View.OnClickLi
                 }
             }
             else if (view.getId() == R.id.ekb_button) {
-                geoURI = "geo:0,0?q=620100, г. Екатеринбург, ул. Сибирский тракт, д.12/3, офис 215, корпус 2, офис 205, Бизнес-Центр \"Квартал\"";
+                geoURI = "geo:0,0?q=620100, г. Екатеринбург, ул. Сибирский тракт, д.12 корпус 3, офис 215";
                 geo = Uri.parse(geoURI);
                 geoIntent = new Intent(Intent.ACTION_VIEW, geo);
 

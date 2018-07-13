@@ -2,8 +2,10 @@ package com.example.a1.myapplication.item;
 
 import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.example.a1.myapplication.R;
 
@@ -16,6 +18,11 @@ public class FragmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fragment);
+
+        //кнопка назад
+        ActionBar actionBar =getSupportActionBar();
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
         items = intent.getIntExtra("items", -1);
@@ -37,5 +44,16 @@ public class FragmentActivity extends AppCompatActivity {
         transaction.add(R.id.fragment_test, itemFragment);
 // Запускаем транзакцию (остальное берет на себя система)
         transaction.commit(); }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
     }
 

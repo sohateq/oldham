@@ -235,12 +235,13 @@
 
         ]]>
     </string>
+
     <string name="ekb_contacts">
         <![CDATA[
         <h4 style="text-align: center;">ЕКАТЕРИНБУРГ</h4>
 <p style="text-align: center;">Адрес: 620100, г. Екатеринбург</p>
 <p style="text-align: center;">ул. Сибирский тракт, д.12/3, офис 215</p>
-<p style="text-align: center;">корпус 2, офис 205, Бизнес-Центр "Квартал"</p>
+<p style="text-align: center;">Бизнес-Центр "Квартал"</p>
 <p style="text-align: center;">Телефон/Факс: +7 (343) 310-32-13</p>
 <p style="text-align: center;">Email: oldham@ekb.oldham.ru</a></p>
 
@@ -258,20 +259,12 @@
         ]]>
     </string>
 
+    <!--Для формы заказа-->
+    <string name="name">Ваше имя</string>
+    <string name="phone">Телефон</string>
+    <string name="mail">E-mail</string>
+    <string name="commentary">Содержание заказа</string>
 
-    <string name="contacts1">
-        МОСКВА\n
-
-Адрес: 123007, г. Москва\n
-
-2-й Хорошевский пр-д, д.7, корп.1\n
-
-Телефон: +7 (495) 739-01-02\n
-
-Факс: +7 (495) 737-44-22\n
-
-Email: moscow@oldham.ru
-    </string>
 
 
 </resources>

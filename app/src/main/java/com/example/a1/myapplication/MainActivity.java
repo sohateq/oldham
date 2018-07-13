@@ -1,14 +1,17 @@
 package com.example.a1.myapplication;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.a1.myapplication.contacts.ContactActivity;
+import com.example.a1.myapplication.order.OrderActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -42,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
+//        Intent intent = new Intent(this, OrderActivity.class);
+//        startActivity(intent);
+
     }
 
     @Override
@@ -50,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            case view.get
 //        }
     }
+
 
 //    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //        switch(position) {
